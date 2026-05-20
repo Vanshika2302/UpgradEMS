@@ -58,6 +58,6 @@ UpGradEMS.Web
 UpGradEMS.Tests
 upgrad-ems-ui
 
-## GitHub Link
+# GitHub Link
 
-[View Project Repository](https://github.com/Vanshika2302/UpgradEMS)
+https://github.com/Vanshika2302/UpgradEMS
