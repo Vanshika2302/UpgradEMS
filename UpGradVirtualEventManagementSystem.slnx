@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="UpGradEMS.API/UpGradEMS.API.csproj" Id="d54489cd-b0df-4b6b-8ca8-359fdf76df77" />
+  <Project Path="UpGradEMS.DAL/UpGradEMS.DAL.csproj" />
+  <Project Path="UpGradEMS.Tests/UpGradEMS.Tests.csproj" Id="1c16929a-0541-40a5-b938-c51d6386aecf" />
+  <Project Path="UpGradEMS.Web/UpGradEMS.Web.csproj" />
+</Solution>

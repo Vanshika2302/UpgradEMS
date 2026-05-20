@@ -1,0 +1,40 @@
+﻿@model List<UpGradEMS.DAL.Models.EventDetails>
+
+<div class="container mt-4">
+    <h2>All Events</h2>
+
+    <a asp-action="Create" class="btn btn-primary mb-3">Add Event</a>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="card mb-3 shadow">
+                    <div class="card-body">
+
+                        <h5>@item.EventName</h5>
+
+                        <p><b>Category:</b> @item.EventCategory</p>
+
+                        <p><b>Date:</b> @item.EventDate.ToShortDateString()</p>
+
+                        <p><b>Status:</b> @item.Status</p>
+
+                        <a asp-action="Join"
+                           asp-route-id="@item.EventId"
+                           class="btn btn-success">
+                            Join Event
+                        </a>
+
+                        <a asp-action="Delete"
+                           asp-route-id="@item.EventId"
+                           class="btn btn-danger btn-sm">
+                            Delete
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

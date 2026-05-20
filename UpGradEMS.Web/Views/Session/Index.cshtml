@@ -1,0 +1,26 @@
+﻿@model List<UpGradEMS.DAL.Models.SessionInfo>
+
+<div class="container mt-4">
+    <h2>Sessions</h2>
+
+    <a asp-action="Create" class="btn btn-primary mb-3">Add Session</a>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Title</th>
+            <th>Event</th>
+            <th>Speaker</th>
+            <th>Time</th>
+        </tr>
+
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>@s.SessionTitle</td>
+                <td>@s.EventId</td>
+                <td>@s.SpeakerId</td>
+                <td>@s.SessionStart - @s.SessionEnd</td>
+            </tr>
+        }
+    </table>
+</div>

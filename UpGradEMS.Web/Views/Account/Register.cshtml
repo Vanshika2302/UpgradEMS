@@ -1,0 +1,22 @@
+﻿@model UpGradEMS.DAL.Models.UserInfo
+
+<div class="container mt-4">
+    <h2>Register</h2>
+
+    <form method="post">
+
+        <input asp-for="EmailId" class="form-control mb-2" placeholder="Email" />
+
+        <input asp-for="UserName" class="form-control mb-2" placeholder="Name" />
+
+        <input asp-for="Password" type="password" class="form-control mb-2" placeholder="Password" />
+
+        <select asp-for="Role" class="form-control mb-2">
+            <option value="Participant">Participant</option>
+            <option value="Admin">Admin</option>
+        </select>
+
+        <button type="submit" class="btn btn-success">Register</button>
+
+    </form>
+</div>

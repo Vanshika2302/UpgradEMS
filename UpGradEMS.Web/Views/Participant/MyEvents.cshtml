@@ -1,0 +1,35 @@
+﻿@model List<UpGradEMS.DAL.Models.ParticipantEventDetails>
+
+<div class="container mt-4">
+    <h2>My Events</h2>
+
+    <table class="table">
+        <tr>
+            <th>Event</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+
+        @foreach (var e in Model)
+        {
+            <tr>
+                <td>@e.EventId</td>
+
+                <td>
+                    @(e.IsAttended ? "Attended" : "Not Attended")
+                </td>
+
+                <td>
+                    @if (!e.IsAttended)
+                    {
+                        <a asp-action="MarkAttendance"
+                           asp-route-id="@e.ID"
+                           class="btn btn-success btn-sm">
+                            Mark Attended
+                        </a>
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+</div>

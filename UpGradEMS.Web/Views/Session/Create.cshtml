@@ -1,0 +1,29 @@
+﻿@model UpGradEMS.DAL.Models.SessionInfo
+
+<div class="container mt-4">
+    <h2>Add Session</h2>
+
+    <form method="post">
+
+        <label>Event</label>
+        <select asp-for="EventId" asp-items="ViewBag.Events" class="form-control mb-2"></select>
+
+        <label>Session Title</label>
+        <input asp-for="SessionTitle" class="form-control mb-2" />
+
+        <label>Speaker</label>
+        <select asp-for="SpeakerId" asp-items="ViewBag.Speakers" class="form-control mb-2"></select>
+
+        <label>Start Time</label>
+        <input asp-for="SessionStart" type="datetime-local" class="form-control mb-2" />
+
+        <label>End Time</label>
+        <input asp-for="SessionEnd" type="datetime-local" class="form-control mb-2" />
+
+        <label>Session URL</label>
+        <input asp-for="SessionUrl" class="form-control mb-2" />
+
+        <button class="btn btn-success">Create Session</button>
+
+    </form>
+</div>

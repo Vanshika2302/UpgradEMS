@@ -1,0 +1,26 @@
+﻿@model UpGradEMS.DAL.Models.EventDetails
+
+<div class="container mt-4">
+
+    <h2 class="mb-3">Add Event</h2>
+
+    <form asp-action="Create" method="post">
+
+        <input asp-for="EventName" class="form-control mb-2" placeholder="Event Name" />
+
+        <input asp-for="EventCategory" class="form-control mb-2" placeholder="Category" />
+
+        <input asp-for="EventDate" type="date" class="form-control mb-2" />
+
+        <textarea asp-for="Description" class="form-control mb-2" placeholder="Description"></textarea>
+
+        <select asp-for="Status" class="form-control mb-2">
+            <option>Active</option>
+            <option>Inactive</option>
+        </select>
+
+        <button type="submit" class="btn btn-success">Add Event</button>
+
+    </form>
+
+</div>
