@@ -1,0 +1,26 @@
+<h2>Event List 🎉</h2>
+
+<div *ngFor="let event of events">
+
+  <h3>{{ event.eventName }}</h3>
+  <p>Category: {{ event.eventCategory }}</p>
+  <p>Date: {{ event.eventDate | date:'mediumDate' }}</p>
+  <p>Status: {{ event.status }}</p>
+  <p>Description: {{ event.description }}</p>
+
+  <button (click)="deleteEvent(event.eventId)">Delete</button>
+
+</div>
+
+
+<h2>Create Event</h2>
+
+<input [(ngModel)]="newEvent.eventName" placeholder="Event Name">
+
+<input [(ngModel)]="newEvent.eventCategory" placeholder="Category">
+
+<input type="date" [(ngModel)]="newEvent.eventDate">
+
+<input [(ngModel)]="newEvent.description" placeholder="Description">
+
+<button (click)="createEvent()">Create</button>

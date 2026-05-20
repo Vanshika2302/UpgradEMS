@@ -1,0 +1,65 @@
+/* Title */
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Event List */
+.event-list {
+  flex: 2;
+}
+
+/* Cards */
+.event-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.2s;
+}
+
+.event-card:hover {
+  transform: scale(1.02);
+}
+
+/* Form */
+.form-section {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Buttons */
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.create-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+.delete-btn {
+  background: #f44336;
+  color: white;
+}

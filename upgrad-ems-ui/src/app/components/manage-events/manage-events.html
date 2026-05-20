@@ -1,0 +1,82 @@
+<div class="container mt-4">
+
+  <h2>Create Event</h2>
+
+  <div class="card p-4 shadow">
+
+    <input
+      type="text"
+      class="form-control mb-3"
+      placeholder="Event Name"
+      [(ngModel)]="event.eventName"
+    >
+
+    <textarea
+      class="form-control mb-3"
+      placeholder="Description"
+      [(ngModel)]="event.description"
+    ></textarea>
+
+    <input
+      type="text"
+      class="form-control mb-3"
+      placeholder="Category"
+      [(ngModel)]="event.eventCategory"
+    >
+
+    <input
+      type="date"
+      class="form-control mb-3"
+      [(ngModel)]="event.eventDate"
+    >
+
+    <button
+      class="btn btn-primary"
+      (click)="createEvent()"
+    >
+      Create Event
+    </button>
+
+  </div>
+
+  <hr>
+
+  <h2 class="mt-5">All Events</h2>
+
+  <div class="row">
+
+    <div
+      class="col-md-4 mb-4"
+      *ngFor="let item of events"
+    >
+
+      <div class="card p-3 shadow">
+
+        <h3>{{ item.eventName }}</h3>
+
+        <p>{{ item.description }}</p>
+
+        <p>
+          <b>Category:</b>
+          {{ item.eventCategory }}
+        </p>
+
+        <p>
+          <b>Date:</b>
+          {{ item.eventDate | date }}
+        </p>
+
+        <button
+          class="btn btn-danger"
+          (click)="deleteEvent(item.eventId)"
+        >
+          Delete
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

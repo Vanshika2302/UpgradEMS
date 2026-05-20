@@ -1,0 +1,62 @@
+<div class="container mt-5">
+
+  <h1 class="mb-4">
+    Manage Speakers
+  </h1>
+
+  <!-- CREATE SPEAKER -->
+
+  <div class="card p-4 shadow mb-5">
+
+    <input
+      type="text"
+      class="form-control mb-3"
+      placeholder="Speaker Name"
+      [(ngModel)]="speaker.name"
+    >
+
+    <input
+      type="text"
+      class="form-control mb-3"
+      placeholder="Expertise"
+      [(ngModel)]="speaker.expertise"
+    >
+
+    <button
+      class="btn btn-dark"
+      (click)="createSpeaker()"
+    >
+      Add Speaker
+    </button>
+
+  </div>
+
+  <!-- SPEAKER LIST -->
+
+  <div class="row">
+
+    <div
+      class="col-md-4 mb-4"
+      *ngFor="let item of speakers"
+    >
+
+      <div class="card p-3 shadow">
+
+        <h3>{{ item.name }}</h3>
+
+        <p>{{ item.expertise }}</p>
+
+        <button
+          class="btn btn-danger"
+          (click)="deleteSpeaker(item.speakerId)"
+        >
+          Delete
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

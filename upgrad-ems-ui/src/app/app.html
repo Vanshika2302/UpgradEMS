@@ -1,0 +1,51 @@
+<!-- PUBLIC NAVBAR -->
+
+<nav class="navbar" *ngIf="!isLoggedIn()">
+
+  <div class="logo">
+    UpGrad Events
+  </div>
+
+  <div class="links">
+
+    <a routerLink="/">Home</a>
+    <a routerLink="/events">Events</a>
+    <a routerLink="/login">Login</a>
+    <a routerLink="/register">Register</a>
+
+  </div>
+
+</nav>
+
+<!-- AFTER LOGIN NAVBAR -->
+
+<nav class="navbar" *ngIf="isLoggedIn()">
+
+  <div class="logo">
+    UpGrad Events
+  </div>
+
+  <div class="links">
+
+    <a routerLink="/">Home</a>
+
+    <a *ngIf="isLoggedIn()"
+    [routerLink]="getDashboardRoute()">
+    Dashboard </a>
+
+  <a
+  routerLink="/events"
+  routerLinkActive="active"
+>
+  Events
+  </a>
+
+    <a (click)="logout()">
+      Logout
+    </a>
+
+  </div>
+
+</nav>
+
+<router-outlet></router-outlet>

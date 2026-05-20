@@ -1,0 +1,15 @@
+<h2>Create Event</h2>
+
+<div class="form-box">
+
+  <input [(ngModel)]="newEvent.eventName" placeholder="Event Name">
+
+  <input [(ngModel)]="newEvent.eventCategory" placeholder="Category">
+
+  <input type="date" [(ngModel)]="newEvent.eventDate">
+
+  <textarea [(ngModel)]="newEvent.description" placeholder="Description"></textarea>
+
+  <button (click)="createEvent()">Create Event</button>
+
+</div>

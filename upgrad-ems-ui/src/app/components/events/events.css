@@ -1,0 +1,67 @@
+.title {
+
+  text-align: center;
+
+  margin: 30px;
+}
+
+.grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+
+  gap: 20px;
+
+  padding: 20px;
+}
+
+.card {
+
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 20px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.actions {
+
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.join {
+
+  flex: 1;
+
+  padding: 10px;
+
+  background: #2563eb;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+}
+
+.delete {
+
+  flex: 1;
+
+  padding: 10px;
+
+  background: crimson;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+}

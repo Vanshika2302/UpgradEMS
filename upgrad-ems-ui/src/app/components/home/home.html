@@ -1,0 +1,35 @@
+<div class="hero">
+
+  <h1>Virtual Event Management System</h1>
+
+  <p>Join exciting events and sessions</p>
+
+</div>
+
+<h2 class="title">Upcoming Events</h2>
+
+<div class="grid">
+
+  <div class="card" *ngFor="let event of events">
+
+    <h3>{{ event.eventName }}</h3>
+
+    <p>{{ event.description }}</p>
+
+    <p>
+      <b>Category:</b>
+      {{ event.eventCategory }}
+    </p>
+
+    <p>
+      <b>Date:</b>
+      {{ event.eventDate | date:'mediumDate' }}
+    </p>
+
+    <button (click)="joinEvent(event)">
+      Join Event
+    </button>
+
+  </div>
+
+</div>

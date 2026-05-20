@@ -1,0 +1,30 @@
+<h2 class="title">All Events</h2>
+
+<div class="grid">
+
+  <div class="card" *ngFor="let event of events">
+
+    <h3>{{ event.eventName }}</h3>
+
+    <p>{{ event.description }}</p>
+
+    <p><b>Category:</b> {{ event.eventCategory }}</p>
+
+    <div class="actions">
+
+      <button class="join">
+        Join
+      </button>
+
+      <button
+        class="delete"
+        (click)="deleteEvent(event.eventId)"
+      >
+        Delete
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

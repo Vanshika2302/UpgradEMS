@@ -1,0 +1,39 @@
+<div class="login-container">
+
+  <!-- Left Section -->
+  <div class="left-panel">
+    <h1>UpGrad Event Management</h1>
+    <p>
+      Manage virtual events, speakers, and sessions
+      in one powerful dashboard.
+    </p>
+  </div>
+
+  <!-- Right Section -->
+  <div class="login-card">
+
+    <h2>Welcome Back 👋</h2>
+
+    <input
+      type="text"
+      [(ngModel)]="username"
+      placeholder="Enter Email"
+    />
+
+    <input
+      type="password"
+      [(ngModel)]="password"
+      placeholder="Enter Password"
+    />
+
+    <button (click)="onLogin()">
+      Login
+    </button>
+
+    <p class="error" *ngIf="error">
+      {{ error }}
+    </p>
+
+  </div>
+
+</div>
